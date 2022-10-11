@@ -259,6 +259,6 @@ function init() {
     window.setInterval(change_Sub_logo, 3000);
 };
 init();
-
+console.log(screen)
 
 
