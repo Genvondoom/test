@@ -1429,7 +1429,7 @@ h3 {
     }
 
     #content-3 #box {
-        margin: 10px 20px 0 20px;
+        margin: 10px 10px 0 10px;
         display: flex;
         flex-flow: wrap row;
 
@@ -1438,13 +1438,13 @@ h3 {
 
     #content-3 #box #box-left {
         margin-right: 15px;
-        flex-basis: 15%;
+        flex-basis: 10%;
         height: 500px;
     }
 
     #content-3 #box #box-right {
         margin-left: 17px;
-        flex-basis: 15%;
+        flex-basis: 10%;
         height: 500px;
     }
 
@@ -1526,7 +1526,7 @@ h3 {
     #main {
         position: relative;
         top: 650px;
-        left: 36%;
+        left: 39%;
         width: 20%;
         height: 20%;
         border: 2px solid #0078FF;
