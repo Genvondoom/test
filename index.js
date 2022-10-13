@@ -32,9 +32,19 @@ let descriptionInfo = [
     }
 ]
 
+/*content-4 */
+let profile_1 = document.querySelector('#img-left-1');
+let profile_2 = document.querySelector('#img-left-2');
+let profile_3 = document.querySelector('#img-left-3');
+let profile_4 = document.querySelector('#img-right-1');
+let profile_5 = document.querySelector('#img-right-2');
+let profile_6 = document.querySelector('#img-right-3');
+let main_profile = document.querySelector('#main');
+let main_profile_text = document.querySelector('#testimony');
+
 /*Container-6 */
-let conatiner_6_box_1 = document.querySelector('#sub-content-container .sub-content-1');
-let conatiner_6_box_2 = document.querySelector('#sub-content-container .sub-content-1');
+let conatiner_6_box_1 = document.querySelector('#sub-content-container  #sub-1');
+let conatiner_6_box_2 = document.querySelector('#sub-content-container #sub-2');
 let conatiner_6_box_3 = document.querySelector('#sub-content-container .sub-content-2 #sub-3');
 let conatiner_6_box_4 = document.querySelector('#sub-content-container .sub-content-2 #sub-4');
 let conatiner_6_prev_btn = document.querySelector('#prev_btn')
@@ -244,6 +254,78 @@ function change_Sub_logo() {
     logo_no++
 }
 
+let testimonies = [
+    {
+        image: '',
+        testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. '
+    },
+    {
+        image: '',
+        testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, giure ducimus quidem?'
+    },
+    {
+        image: '',
+        testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam,  perferendis? Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
+    },
+    {
+        image: '',
+        testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, ratione, Veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
+    },
+    {
+        image: '',
+        testimony: 'Lorem ipsum dolor sit,consectetur adipisicing elit. Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
+    },
+    {
+        image: '',
+        testimony: 'Amet consectetur adipisicing elit. Magnam, ratione perferendis? Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
+    },
+    {
+        image: '',
+        testimony: 'Consectetur adipisicing elit. Magnam, ratione perferendis? Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
+    }
+]
+
+
+
+
+
+function selectTestimony(no) {
+    console.log(no);
+    let selected = testimonies.splice(no, 1)
+    console.log(selected);
+    testimonies.unshift(selected[0])
+    console.log(testimonies);
+    main_profile_text.innerText = testimonies[0].testimony;
+    /*main_profile_text.innerText = testimonies[0].image*/
+}
+
+profile_1.addEventListener('click', () => {
+    selectTestimony(1)
+});
+
+profile_2.addEventListener('click', () => {
+    selectTestimony(2)
+});
+
+profile_3.addEventListener('click', () => {
+    selectTestimony(3)
+});
+
+profile_4.addEventListener('click', () => {
+    selectTestimony(4)
+});
+
+profile_5.addEventListener('click', () => {
+    selectTestimony(5)
+});
+profile_6.addEventListener('click', () => {
+    selectTestimony(6)
+});
+
+
+
+
+
 function init() {
     banner_switcher()
     subimage_1.style.background = `url(images/sub-banner/sub1.jpg) no-repeat center center/cover`;
@@ -252,6 +334,7 @@ function init() {
     subimage_2.innerText = "Question";
     subimage_3.style.background = `url(images/sub-banner/sub3.jpg) no-repeat center center/cover`;
     subimage_3.innerText = "Question";
+    selectTestimony(0)
     rand();
     refresh_container_6_images(random);
     description_switch(3)
@@ -259,6 +342,6 @@ function init() {
     window.setInterval(change_Sub_logo, 3000);
 };
 init();
-console.log(screen)
+
 
 
