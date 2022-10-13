@@ -974,7 +974,7 @@ h3 {
     text-align: center;
     position: relative;
     top: 30px;
-    left: 18px;
+    left: 37px;
     background-color: white;
 }
 
@@ -1425,7 +1425,7 @@ h3 {
 @media only screen and (min-width: 800px) {
     #content-3 {
         display: block;
-        margin: -100px 0 0 0px;
+        margin: 10px 0 0 0px;
     }
 
 
