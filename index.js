@@ -256,37 +256,41 @@ function change_Sub_logo() {
 
 let testimonies = [
     {
-        image: '',
+        image: 'images/profilePics/ben-den-engelsen-YUu9UAcOKZ4-unsplash.jpg',
         testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. '
     },
     {
-        image: '',
+        image: 'images/profilePics/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg',
         testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, giure ducimus quidem?'
     },
     {
-        image: '',
+        image: 'images/profilePics/jurica-koletic-7YVZYZeITc8-unsplash.jpg',
         testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam,  perferendis? Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
     },
     {
-        image: '',
+        image: 'images/profilePics/christopher-campbell-rDEOVtE7vOs-unsplash.jpg',
         testimony: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, ratione, Veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
     },
     {
-        image: '',
+        image: 'images/profilePics/michael-dam-mEZ3PoFGs_k-unsplash.jpg',
         testimony: 'Lorem ipsum dolor sit,consectetur adipisicing elit. Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
     },
     {
-        image: '',
+        image: 'images/profilePics/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg',
         testimony: 'Amet consectetur adipisicing elit. Magnam, ratione perferendis? Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
     },
     {
-        image: '',
+        image: 'images/profilePics/vince-veras-AJIqZDAUD7A-unsplash.jpg',
         testimony: 'Consectetur adipisicing elit. Magnam, ratione perferendis? Debitis et, veniam nihil impedit aliquam accusantium recusandae voluptates blanditiis adipisci quisquam ex, odit, dolorem natus voluptatem tempora ut esse veritatis obcaecati. Qui ipsa veritatis perspiciatis in autem quas fuga laborum optio, distinctio itaque tenetur fugiat iure ducimus quidem?'
     }
 ]
 
 
-
+function select_sub_image(profile, target) {
+    profile.src = testimonies[target].image
+    profile.style.width = "40%";
+    profile.style.height = "10%";
+}
 
 
 function selectTestimony(no) {
@@ -296,11 +300,22 @@ function selectTestimony(no) {
     testimonies.unshift(selected[0])
     console.log(testimonies);
     main_profile_text.innerText = testimonies[0].testimony;
-    /*main_profile_text.innerText = testimonies[0].image*/
+    main_profile.src = testimonies[0].image
+    refresh_sub_images()
+
 }
 
+function refresh_sub_images() {
+    select_sub_image(profile_1, 1);
+    select_sub_image(profile_2, 2);
+    select_sub_image(profile_3, 3);
+    select_sub_image(profile_4, 4);
+    select_sub_image(profile_5, 5);
+    select_sub_image(profile_6, 6);
+}
 profile_1.addEventListener('click', () => {
     selectTestimony(1)
+
 });
 
 profile_2.addEventListener('click', () => {
@@ -335,6 +350,7 @@ function init() {
     subimage_3.style.background = `url(images/sub-banner/sub3.jpg) no-repeat center center/cover`;
     subimage_3.innerText = "Question";
     selectTestimony(0)
+
     rand();
     refresh_container_6_images(random);
     description_switch(3)

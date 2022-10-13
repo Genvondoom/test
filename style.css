@@ -1428,6 +1428,8 @@ h3 {
         margin: -100px 0 0 0px;
     }
 
+
+
     #content-3 #box {
         margin: 10px 10px 0 10px;
         display: flex;
@@ -1455,6 +1457,7 @@ h3 {
         top: 10px;
         border: 2px solid #0078FF;
         border-radius: 50%;
+
     }
 
     .line-image-2 {
@@ -1485,7 +1488,7 @@ h3 {
 
 
     #content-3 #box #box-center {
-        margin: 150px 20px 0 20px;
+        margin: 100px 20px 0 20px;
 
         flex-basis: 50%;
         height: 250px;
@@ -1525,10 +1528,10 @@ h3 {
 
     #main {
         position: relative;
-        top: 650px;
-        left: 39%;
-        width: 20%;
-        height: 20%;
+        top: 620px;
+        left: 38%;
+        height: 200px;
+        width: 200px;
         border: 2px solid #0078FF;
         border-radius: 50%;
     }
